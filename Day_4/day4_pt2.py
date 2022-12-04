@@ -8,14 +8,12 @@ ASSIGNMENT_RANGE_DELIMETER = '-'
 assignment_overlap_count = 0
 for assignment_pair in assignment_pairs:
     assignments = assignment_pair.split(ASSIGNMENT_PAIR_DELIMETER)
-    assignment_one = assignments[0]
-    assignment_two = assignments[1]
-    assignment_one_sections = assignment_one.split(ASSIGNMENT_RANGE_DELIMETER)
-    assignment_two_sections = assignment_two.split(ASSIGNMENT_RANGE_DELIMETER)
-    assignment_one_beg = int(assignment_one_sections[0])
-    assignment_one_end = int(assignment_one_sections[1])
-    assignment_two_beg = int(assignment_two_sections[0])
-    assignment_two_end = int(assignment_two_sections[1])
+    assignment_one_range = assignments[0].split(ASSIGNMENT_RANGE_DELIMETER)
+    assignment_two_range = assignments[1].split(ASSIGNMENT_RANGE_DELIMETER)
+    assignment_one_beg = int(assignment_one_range[0])
+    assignment_one_end = int(assignment_one_range[1])
+    assignment_two_beg = int(assignment_two_range[0])
+    assignment_two_end = int(assignment_two_range[1])
 
     if assignment_one_beg >= assignment_two_beg and assignment_one_beg <= assignment_two_end:
         assignment_overlap_count += 1
