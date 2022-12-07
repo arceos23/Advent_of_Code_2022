@@ -1,0 +1,9 @@
+$ cd /
+$ ls
+500 bch.lht
+100000000 ccqfdznj.sqg
+dir a
+$ cd a
+$ ls
+400 a.lht
+200 b.sqg
